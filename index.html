@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Video games filter</title>
+</head>
+<body>
+    <div id="main-wrapper">
+        <header>
+            <nav id="navbar-wrapper">
+                <div id="search-wrapper">
+                    <input id="input-field" type="text" placeholder="Browse games">
+                </div>
+                <div id="filters-wrapper">
+                    <div id="filter-items-wrapper">
+                        <button id="filter-btn">Filter</button>
+                        <div id="filter-items">
+                            <a href="#" id="name-ascending">Name: A-Z</a>
+                            <a href="#" id="name-descending">Name: Z-A</a>
+                            <a href="#" id="price-ascending">Price: Low to High</a>
+                            <a href="#" id="price-descending">Price: High to Low</a>
+                        </div>
+                    </div>
+                    <div id="genre-wrapper">
+                        <button id="genre-btn">Genre</button>
+                        <div id="genre-items">
+                            <a href="#" class="filter" data-genre="action">Action</a>
+                            <a href="#" class="filter" data-genre="adventure">Adventure</a>
+                            <a href="#" class="filter" data-genre="atmospheric">Atmospheric</a>
+                            <a href="#" class="filter" data-genre="fantasy">Fantasy</a>
+                            <a href="#" class="filter" data-genre="horror">Horror</a>
+                            <a href="#" class="filter" data-genre="multiplayer">Multiplayer</a>
+                            <a href="#" class="filter" data-genre="open-world">Open world</a>
+                            <a href="#" class="filter" data-genre="RPG">RPG</a>
+                            <a href="#" class="filter" data-genre="sci-fi">Sci-fi</a>
+                            <a href="#" class="filter" data-genre="shooter">Shooter</a>
+                            <a href="#" class="filter" data-genre="stealth">Stealth</a>
+                            <a href="#" class="filter" data-genre="strategy">Strategy</a>
+                            <a href="#" class="filter" data-genre="survival">Survival</a>
+                            <a href="#" class="filter" data-genre="zombies">Zombies</a>
+                        </div>
+                    </div>
+                    <div id="reset-wrapper">
+                        <button id="reset-btn">Reset</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main id="games-wrapper">
+            <div class="game-div action open-world RPG stealth">
+                <img src="img/assassins-creed-origins.jpg">
+                <p class="game-name">Assassin's Creed Origins</p>
+                <span class="price">€9.50</span>
+            </div>
+            <div class="game-div action open-world RPG stealth">
+                <img src="img/assassins-creed-valhalla.jpg">
+                <p class="game-name">Assassin's Creed Valhalla</p>
+                <span class="price">€40.00</span>
+            </div>
+            <div class="game-div action multiplayer shooter">
+                <img src="img/battlefield4.jpg">
+                <p class="game-name">Battlefield 4</p>
+                <span class="price">€5.00</span>
+            </div>
+            <div class="game-div action atmospheric RPG shooter">
+                <img src="img/bioshock.jpg">
+                <p class="game-name">Bioshock Collection</p>
+                <span class="price">€8.50</span>
+            </div>
+            <div class="game-div action open-world RPG sci-fi">
+                <img src="img/cyberpunk-2077.jpg">
+                <p class="game-name">Cyberpunk 2077</p>
+                <span class="price">€22.40</span>
+            </div>
+            <div class="game-div action fantasy RPG">
+                <img src="img/ds2.jpg">
+                <p class="game-name">Dark Souls 2</p>
+                <span class="price">€16.60</span>
+            </div>
+            <div class="game-div action fantasy RPG">
+                <img src="img/ds3.jpg">
+                <p class="game-name">Dark Souls 3 Deluxe Edition</p>
+                <span class="price">€19.00</span>
+            </div>
+            <div class="game-div action fantasy RPG">
+                <img src="img/ds-remastered.jpg">
+                <p class="game-name">Dark Souls Remastered</p>
+                <span class="price">€22.00</span>
+            </div>
+            <div class="game-div action adventure horror open-world survival zombies">
+                <img src="img/days-gone.jpg">
+                <p class="game-name">Days Gone</p>
+                <span class="price">€33.90</span>
+            </div>
+            <div class="game-div horror multiplayer survival">
+                <img src="img/dead-by-daylight.jpg">
+                <p class="game-name">Dead by Daylight</p>
+                <span class="price">€4.70</span>
+            </div>
+            <div class="game-div action adventure horror sci-fi survival">
+                <img src="img/death-stranding.jpg">
+                <p class="game-name">Death Stranding</p>
+                <span class="price">€21.30</span>
+            </div>
+            <div class="game-div action adventure multiplayer open-world shooter">
+                <img src="img/destiny2.jpg">
+                <p class="game-name">Destiny 2 Witch Queen Deluxe Edition</p>
+                <span class="price">€40.50</span>
+            </div>
+            <div class="game-div action adventure">
+                <img src="img/dmc5.png">
+                <p class="game-name">Devil May Cry 5 Deluxe Edition</p>
+                <span class="price">€20.00</span>
+            </div>
+            <div class="game-div action stealth">
+                <img src="img/dishonored.jpg">
+                <p class="game-name">Dishonored</p>
+                <span class="price">€2.50</span>
+            </div>
+            <div class="game-div action stealth">
+                <img src="img/dishonored2.jpg">
+                <p class="game-name">Dishonored 2</p>
+                <span class="price">€4.70</span>
+            </div>
+            <div class="game-div action sci-fi shooter">
+                <img src="img/doom.jpg">
+                <p class="game-name">DOOM</p>
+                <span class="price">€5.90</span>
+            </div>
+            <div class="game-div action sci-fi shooter">
+                <img src="img/doom-eternal.jpg">
+                <p class="game-name">DOOM Eternal Deluxe Edition</p>
+                <span class="price">€22.00</span>
+            </div>
+            <div class="game-div fantasy open-world RPG">
+                <img src="img/dragon-age-inquisition.jpg">
+                <p class="game-name">Dragon Age Inquisition GOTY Edition</p>
+                <span class="price">€11.80</span>
+            </div>
+            <div class="game-div horror survival zombies">
+                <img src="img/dying-light2.jpg">
+                <p class="game-name">Dying Light 2</p>
+                <span class="price">€39.20</span>
+            </div>
+            <div class="game-div horror survival zombies">
+                <img src="img/dying-light.jpg">
+                <p class="game-name">Dying Light: The Following</p>
+                <span class="price">€8.30</span>
+            </div>
+            <div class="game-div action adventure fantasy open-world">
+                <img src="img/elden-ring.jpg">
+                <p class="game-name">Elden Ring</p>
+                <span class="price">€41.90</span>
+            </div>
+            <div class="game-div action multiplayer open-world shooter">
+                <img src="img/far-cry5.jpg">
+                <p class="game-name">Far Cry 5</p>
+                <span class="price">€8.30</span>
+            </div>
+            <div class="game-div action adventure atmospheric fantasy">
+                <img src="img/god-of-war.jpg">
+                <p class="game-name">God of War</p>
+                <span class="price">€34.70</span>
+            </div>
+            <div class="game-div action adventure">
+                <img src="img/heavy-rain.jpg">
+                <p class="game-name">Heavy Rain</p>
+                <span class="price">€7.10</span>
+            </div>
+            <div class="game-div action open-world shooter stealth strategy">
+                <img src="img/hitman2.jpg">
+                <p class="game-name">Hitman 2</p>
+                <span class="price">€9.50</span>
+            </div>
+            <div class="game-div action adventure open-world RPG">
+                <img src="img/horizon-forbidden-west.jpg">
+                <p class="game-name">Horizon Forbidden West</p>
+                <span class="price">€47.50</span>
+            </div>
+            <div class="game-div action adventure open-world RPG">
+                <img src="img/kingdom-come-deliverance.jpg">
+                <p class="game-name">Kingdom Come: Deliverance Royal Edition</p>
+                <span class="price">€16.40</span>
+            </div>
+            <div class="game-div adventure open-world strategy">
+                <img src="img/la-noire.jpg">
+                <p class="game-name">L.A. Noire: The Complete Edition</p>
+                <span class="price">€12.00</span>
+            </div>
+            <div class="game-div horror multiplayer shooter survival zombies">
+                <img src="img/l4d2.jpg">
+                <p class="game-name">Left For Dead 2</p>
+                <span class="price">€7.90</span>
+            </div>
+            <div class="game-div adventure horror survival">
+                <img src="img/little-nightmares.jpg">
+                <p class="game-name">Little Nightmares: Complete Edition</p>
+                <span class="price">€6.50</span>
+            </div>
+            <div class="game-div action RPG sci-fi shooter">
+                <img src="img/mass-effect.jpg">
+                <p class="game-name">Mass Effect Legendary Edition</p>
+                <span class="price">€33.30</span>
+            </div>
+            <div class="game-div action adventure fantasy open-world RPG">
+                <img src="img/middle-earth.png">
+                <p class="game-name">Middle Earth: Shadow of War</p>
+                <span class="price">€3.50</span>
+            </div>
+            <div class="game-div action multiplayer open-world RPG">
+                <img src="img/monster-hunter.jpg">
+                <p class="game-name">Monster Hunter: World</p>
+                <span class="price">€26.20</span>
+            </div>
+            <div class="game-div action atmospheric fantasy RPG">
+                <img src="img/nioh2.jpg">
+                <p class="game-name">Nioh 2: The Complete Edition</p>
+                <span class="price">€39.20</span>
+            </div>
+            <div class="game-div action adventure open-world survival">
+                <img src="img/no-mans-sky.jpg">
+                <p class="game-name">No Man's Sky</p>
+                <span class="price">€15.40</span>
+            </div>
+            <div class="game-div atmospheric horror survival">
+                <img src="img/outlast.jpg">
+                <p class="game-name">Outlast</p>
+                <span class="price">€2.90</span>
+            </div>
+            <div class="game-div atmospheric horror survival">
+                <img src="img/outlast2.jpg">
+                <p class="game-name">Outlast 2</p>
+                <span class="price">€4.20</span>
+            </div>
+            <div class="game-div action shooter stealth">
+                <img src="img/payday2.jpg">
+                <p class="game-name">Payday 2</p>
+                <span class="price">€5.30</span>
+            </div>
+            <div class="game-div atmospheric sci-fi shooter">
+                <img src="img/prey.jpg">
+                <p class="game-name">Prey: Day One Edition</p>
+                <span class="price">€28.20</span>
+            </div>
+            <div class="game-div action adventure fantasy RPG shooter">
+                <img src="img/remnant.jpg">
+                <p class="game-name">Remnant: From the Ashes</p>
+                <span class="price">€15.40</span>
+            </div>
+            <div class="game-div horror survival">
+                <img src="img/re2.jpg">
+                <p class="game-name">Resident Evil 2 Deluxe Edition</p>
+                <span class="price">€15.40</span>
+            </div>
+            <div class="game-div horror survival">
+                <img src="img/re3.jpg">
+                <p class="game-name">Resident Evil 3</p>
+                <span class="price">€16.60</span>
+            </div>
+            <div class="game-div horror survival">
+                <img src="img/re-village.jpg">
+                <p class="game-name">Resident Evil Village</p>
+                <span class="price">€34.50</span>
+            </div>
+            <div class="game-div action adventure">
+                <img src="img/sekiro.jpg">
+                <p class="game-name">Sekiro: Shadows Die Twice</p>
+                <span class="price">€55.60</span>
+            </div>
+            <div class="game-div action adventure open-world survival">
+                <img src="img/subnautica.png">
+                <p class="game-name">Subnautica: Below Zero</p>
+                <span class="price">€17.50</span>
+            </div>
+            <div class="game-div action adventure RPG survival">
+                <img src="img/terraria.jpg">
+                <p class="game-name">Terraria</p>
+                <span class="price">€6.50</span>
+            </div>
+            <div class="game-div action fantasy multiplayer open-world RPG">
+                <img src="img/morrowind.jpg">
+                <p class="game-name">The Elder Scrolls Online: Morrowind</p>
+                <span class="price">€6.50</span>
+            </div>
+            <div class="game-div action adventure horror survival">
+                <img src="img/evil-within.jpg">
+                <p class="game-name">The Evil Within</p>
+                <span class="price">€3.30</span>
+            </div>
+            <div class="game-div action atmospheric open-world RPG">
+                <img src="img/witcher3.png">
+                <p class="game-name">The Witcher 3: Wild Hunt GOTY Edition</p>
+                <span class="price">€14.80</span>
+            </div>
+            <div class="game-div action adventure">
+                <img src="img/tomb-raider.jpg">
+                <p class="game-name">Tomb Raider GOTY Edition</p>
+                <span class="price">€5.10</span>
+            </div>
+        </main>
+        <footer id="footer">
+            <p>©2022 Copyright</p>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>

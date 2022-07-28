@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+#main-wrapper {
+    min-height: 100vh;
+    background-image: url("./img/bkg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 50%;
+}
+
+#navbar-wrapper {
+    display: flex;
+    background-color: rgb(28, 28, 80); 
+}
+
+#search-wrapper {
+    width: 65%;
+}
+
+#input-field {
+    margin: 0.7rem 2rem;
+    padding: 0.4rem;
+    width: 55%;
+    outline: none;
+}
+
+#filters-wrapper {
+    margin-right: 0.5rem;
+    width: 35%;
+    display: flex;
+}
+
+#filter-items-wrapper, #genre-wrapper, #reset-wrapper {
+    position: relative;
+    width: 37.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset-wrapper {
+    width: 25%;
+}
+
+#filter-btn, #genre-btn {
+    width: 5.5rem;
+}
+
+#filter-btn, #genre-btn, #reset-btn {
+    height: 1.8rem;
+    max-height: 65%;
+    font-size: 0.9rem;
+    background-color: rgb(235, 241, 240);
+    border: transparent;
+}
+
+#reset-btn {
+    width: 4rem;
+}
+
+#filter-items, #genre-items {
+    position: absolute;
+    width: 100%;
+    display: none;
+    border: 0.1rem solid rgb(95, 95, 146);
+}
+
+#filter-items a, #genre-items a {
+    padding: 0.7rem;
+    display: block;
+    font-size: 0.9em;
+    text-align: center;
+    color: black;
+    background-color: rgb(237, 237, 243);
+}
+
+#filter-items-wrapper:hover #filter-items, #genre-wrapper:hover #genre-items {
+    top: 3.5rem;
+    display: block;
+}
+
+#filter-items a:hover, #genre-items a:hover  {
+    background-color: rgb(203, 203, 209); 
+}
+
+#games-wrapper {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+.game-div {
+    margin: 0 0.1rem 0.8rem;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 70%;
+}
+
+.game-name {
+    margin-top: 1rem;
+    width: 95%;
+    max-width: 95%;
+    height: 3.8rem;
+    text-align: center;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.price {
+    margin: 0.8rem 0;
+    font-size: 1.2em;
+}
+
+#footer {
+    padding: 1.5rem 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+@media (max-width: 50em) {
+    #filter-btn, #genre-btn {
+        width: 4.5rem;
+    }
+    #reset-btn {
+        width: 3.5rem;
+    }
+    #filter-items a, #genre-items a {
+        padding: 0.5rem;
+        font-size: 0.7em;
+    }
+    .game-div {
+        width: 30%;
+    }
+    .game-name {
+        height: 3.5rem;
+        font-size: 0.9em;
+    }
+    .price {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 37.5em) {
+    #navbar-wrapper {
+        height: 5.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    #search-wrapper {
+        width: 60%;
+        height: 50%;
+    }
+    #input-field {
+        margin: 0.5rem 0;
+        width: 100%;
+        height: 1.7rem;
+    }
+    #filters-wrapper {
+        margin: 0;
+        width: 100%;
+        height: 50%;
+    }
+    #filter-items-wrapper, #genre-wrapper, #reset-wrapper {
+        width: 35%;
+    }
+    #filter-btn, #genre-btn {
+        width: 4rem;
+        font-size: 0.8rem;
+    }
+    #reset-btn {
+        width: 3rem;
+        font-size: 0.8rem;
+    }
+    #filter-items-wrapper:hover #filter-items, #genre-wrapper:hover #genre-items {
+        top: 2.8rem;
+    }
+    .game-name {
+        font-size: 0.8em;
+    }
+    .price {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 31.25em) {
+    #games-wrapper {
+        padding: 1rem 0;
+    }
+    .game-div {
+        width: 45%;
+    }
+    .game-name {
+        margin-top: 0.5rem;
+        height: 3.3rem;
+    }
+    img {
+        width: 75%;
+    }
+    #footer {
+        font-size: 0.7em;
+    }
+}
