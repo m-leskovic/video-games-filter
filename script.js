@@ -8,83 +8,74 @@ let resetBtn = document.querySelector("#reset-btn");
 let gamesWrapper = document.querySelector("#games-wrapper");
 let gameDiv = document.querySelectorAll(".game-div");
 
-/* Search for game names (case insensitive) */
-
-function search() {
-    let inputValue = input.value.toLowerCase();
-    for (let i = 0; i < gameDiv.length; i++) {
-        let gameNames = gameDiv[i].querySelectorAll(".game-name")[0];
-        let originalValue = gameNames.innerText.toLowerCase().indexOf(inputValue) > -1;
-        let altValue = gameNames.innerText.toLowerCase().replace(/[\.:']/gi, "").indexOf(inputValue) > -1;
-        originalValue || altValue ? gameDiv[i].style.display = "" : gameDiv[i].style.display = "none";
-    }
-}
-
+const search = () => {
+  let inputValue = input.value.toLowerCase();
+  for (let i = 0; i < gameDiv.length; i++) {
+    let gameNames = gameDiv[i].querySelectorAll(".game-name")[0];
+    let originalValue =
+      gameNames.innerText.toLowerCase().indexOf(inputValue) > -1;
+    let altValue =
+      gameNames.innerText
+        .toLowerCase()
+        .replace(/[\.:']/gi, "")
+        .indexOf(inputValue) > -1;
+    originalValue || altValue
+      ? (gameDiv[i].style.display = "")
+      : (gameDiv[i].style.display = "none");
+  }
+};
 input.addEventListener("keyup", search);
 
-/* Sort in A-Z (ascending) order */
-
-function nameAZ() {
-    Array.from(gamesWrapper.children)
+const nameAZ = () => {
+  Array.from(gamesWrapper.children)
     .sort((a, b) => {
-        return a.textContent.localeCompare(b.textContent);
-    }).forEach(game => gamesWrapper.append(game));
-}
-
+      return a.textContent.localeCompare(b.textContent);
+    })
+    .forEach((game) => gamesWrapper.append(game));
+};
 nameAscending.addEventListener("click", nameAZ);
 
-/* Sort in Z-A (descending) order */
-
-function nameZA() {
-    Array.from(gamesWrapper.children)
+const nameZA = () => {
+  Array.from(gamesWrapper.children)
     .sort((a, b) => {
-        return b.textContent.localeCompare(a.textContent);
-    }).forEach(game => gamesWrapper.append(game));
-}
-
+      return b.textContent.localeCompare(a.textContent);
+    })
+    .forEach((game) => gamesWrapper.append(game));
+};
 nameDescending.addEventListener("click", nameZA);
 
-/* Convert the text content of the <span> element into a number and ignore the "€" symbol */
+const price = (e) =>
+  Number(e.querySelector(".price").textContent.replace(/\€/g, ""));
 
-let price = e => Number(e.querySelector(".price").textContent.replace(/\€/g, ""));
-
-/* Sort by price low to high */
-
-function lowToHigh() {
-    Array.from(gamesWrapper.children)
+const lowToHigh = () => {
+  Array.from(gamesWrapper.children)
     .sort((a, b) => {
-        return price(a) - price(b);
-    }).forEach(game => gamesWrapper.append(game));
-}
-
+      return price(a) - price(b);
+    })
+    .forEach((game) => gamesWrapper.append(game));
+};
 priceAscending.addEventListener("click", lowToHigh);
 
-/* Sort by price high to low */
-
-function highToLow() {
-    Array.from(gamesWrapper.children)
+const highToLow = () => {
+  Array.from(gamesWrapper.children)
     .sort((a, b) => {
-        return price(b) - price(a);
-    }).forEach(game => gamesWrapper.append(game));
-}
-
+      return price(b) - price(a);
+    })
+    .forEach((game) => gamesWrapper.append(game));
+};
 priceDescending.addEventListener("click", highToLow);
 
-/* Display games that match the selected genre */
+const switchGenres = (e) => {
+  let target = e.target.dataset.genre;
+  gameDiv.forEach((game) => {
+    game.classList.contains(target)
+      ? (game.style.display = "")
+      : (game.style.display = "none");
+  });
+};
 
-function switchGenres(e) {
-    let target = e.target.dataset.genre;
-    gameDiv.forEach(game => {
-        (game.classList.contains(target))?
-        game.style.display = "" :
-        game.style.display = "none";
-    });
-}
-
-genreFilters.forEach(filter => {
-    filter.addEventListener("click", switchGenres);
+genreFilters.forEach((filter) => {
+  filter.addEventListener("click", switchGenres);
 });
-
-/* Reset the page back to default */
 
 resetBtn.addEventListener("click", () => window.location.reload());
